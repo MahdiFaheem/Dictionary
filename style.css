@@ -1,0 +1,169 @@
+:root {
+  --background-color: #f6f6f6;
+  --input-placeholder-color: #c2c2c2;
+  --accent-color: #d76ffe;
+  --hr-background-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+main {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-block: 1rem;
+  width: 90%;
+  margin-inline: auto;
+}
+
+nav h1 {
+  font-size: 2rem;
+}
+
+.icon {
+  width: 3.125rem;
+  aspect-ratio: 1 / 1;
+}
+
+section {
+  width: 90%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding-block: 1rem;
+  padding-left: 1rem;
+  padding-right: 4rem;
+  background: var(--background-color);
+  border: none;
+  border-radius: 1rem;
+  font-size: 2rem;
+}
+
+.search-input:focus-visible {
+  outline-color: var(--accent-color);
+}
+
+.search-input::placeholder {
+  color: var(--input-placeholder-color);
+}
+
+.search-area {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.words-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+}
+
+.word {
+  font-size: 3rem;
+}
+
+.words-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.phonetic {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+.play-icon {
+  border: 0.1875rem solid var(--accent-color);
+}
+
+.words-section:has(.word:empty) .play-icon {
+  display: none;
+}
+
+.partOfSpeech {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+}
+
+main .partOfSpeech:not(:first-of-type) {
+  margin-top: 1.5rem;
+}
+
+.hr-line {
+  width: 100%;
+  height: 0.0625rem;
+  opacity: 0.2;
+  background-color: var(--hr-background-color);
+}
+
+.meaning-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.partOfSpeech p {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+ul {
+  margin-left: 2rem;
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  display: inline-block;
+  width: 1rem;
+  margin-left: -1rem;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.synonyms-area, .source-area {
+  display: flex;
+  gap: 1rem;
+}
+
+.synonyms-area p:not(:first-child) {
+  color: var(--accent-color);
+}
+
+.source-area a {
+  text-decoration: none;
+}
+
+.source-section {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
